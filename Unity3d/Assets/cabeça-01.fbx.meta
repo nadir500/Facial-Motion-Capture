@@ -1,0 +1,172 @@
+fileFormatVersion: 2
+guid: f61943a007889644bab496d841b5c9cc
+timeCreated: 1513589166
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Expression__Anger
+    100004: Expression__Disgust
+    100006: Expression__Fear
+    100008: Expression__Sad
+    100010: Expression__SmileClosed
+    100012: Expression__SmileOpen
+    100014: Expression__Surprise
+    100016: eyeL_hi
+    100018: eyeR_hi
+    100020: Modifier__Blink_Left
+    100022: Modifier__Blink_Right
+    100024: Modifier__BrowDown_Left
+    100026: Modifier__BrowDown_Right
+    100028: Modifier__BrowIn_Left
+    100030: Modifier__BrowIn_Right
+    100032: Modifier__BrowUp_Left
+    100034: Modifier__BrowUp_Right
+    100036: Modifier__Ears_Out
+    100038: Modifier__Epicanthic_Fold
+    100040: Modifier__EyeSquint_Left
+    100042: Modifier__EyeSquint_Right
+    100044: Modifier__LookDown
+    100046: Modifier__LookLeft
+    100048: Modifier__LookRight
+    100050: Modifier__LookUp
+    100052: Neutral
+    100054: Phoneme__aah
+    100056: Phoneme__B_M_P
+    100058: Phoneme__big_aah
+    100060: Phoneme__ch_J_sh
+    100062: Phoneme__D_S_T
+    100064: Phoneme__ee
+    100066: Phoneme__eh
+    100068: Phoneme__F_V
+    100070: Phoneme__i
+    100072: Phoneme__K
+    100074: Phoneme__N
+    100076: Phoneme__oh
+    100078: Phoneme__ooh_Q
+    100080: Phoneme__R
+    100082: Phoneme__th
+    100084: Phoneme__W
+    100086: skin_hi
+    400000: //RootNode
+    400002: Expression__Anger
+    400004: Expression__Disgust
+    400006: Expression__Fear
+    400008: Expression__Sad
+    400010: Expression__SmileClosed
+    400012: Expression__SmileOpen
+    400014: Expression__Surprise
+    400016: eyeL_hi
+    400018: eyeR_hi
+    400020: Modifier__Blink_Left
+    400022: Modifier__Blink_Right
+    400024: Modifier__BrowDown_Left
+    400026: Modifier__BrowDown_Right
+    400028: Modifier__BrowIn_Left
+    400030: Modifier__BrowIn_Right
+    400032: Modifier__BrowUp_Left
+    400034: Modifier__BrowUp_Right
+    400036: Modifier__Ears_Out
+    400038: Modifier__Epicanthic_Fold
+    400040: Modifier__EyeSquint_Left
+    400042: Modifier__EyeSquint_Right
+    400044: Modifier__LookDown
+    400046: Modifier__LookLeft
+    400048: Modifier__LookRight
+    400050: Modifier__LookUp
+    400052: Neutral
+    400054: Phoneme__aah
+    400056: Phoneme__B_M_P
+    400058: Phoneme__big_aah
+    400060: Phoneme__ch_J_sh
+    400062: Phoneme__D_S_T
+    400064: Phoneme__ee
+    400066: Phoneme__eh
+    400068: Phoneme__F_V
+    400070: Phoneme__i
+    400072: Phoneme__K
+    400074: Phoneme__N
+    400076: Phoneme__oh
+    400078: Phoneme__ooh_Q
+    400080: Phoneme__R
+    400082: Phoneme__th
+    400084: Phoneme__W
+    400086: skin_hi
+    4300000: eyeL_hi
+    4300002: eyeR_hi
+    4300004: skin_hi
+    9500000: //RootNode
+    13700000: eyeL_hi
+    13700002: eyeR_hi
+    13700004: skin_hi
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
