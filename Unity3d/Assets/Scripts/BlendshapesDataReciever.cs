@@ -14,9 +14,10 @@ public class BlendshapesDataReciever : MonoBehaviour {
 	Thread receiveThread;
 	UdpClient client;
 	public int port;
-
+	public LandmarkCoordinates[] landmarks;
 	//info
-
+    private int x,y;
+	private int ntemp;
 	public string lastReceivedUDPPacket = "";
 	public string allReceivedUDPPackets = "";
 
@@ -24,9 +25,10 @@ public class BlendshapesDataReciever : MonoBehaviour {
 		init();
 		//ExtractResults();
 	}
-public string[] ExtractResults(string socket_string_input)
+public void ExtractResults(string socket_string_input)
 {
 	 string str= "[[100 100]\n[200 10]\n[10 30]\n[20 20]]";
+	
 	 string[] the_coords= new string[68*2]; //landmarks x,y
 	 String regex = @"[\[\]']+";
 	 Regex regex_newline = new Regex("(\r\n|\r|\n)");   // remove the '+'
@@ -35,17 +37,31 @@ public string[] ExtractResults(string socket_string_input)
 
     string output2= regex_newline.Replace(output1, ",");
     string result = Regex.Replace(output2, @"(?<=\d)\p{Zs}(?=\d)", ",");
-	//Debug.Log("sadasdfg "+result);
-      //Debug.Log(test);
-	 // Debug.Log(test2);
 
-	return Regex.Split(result,",");
-	
-	 //making the list :D 
+	string[] extracted_result= Regex.Split(result,",");
+	landmarks= new LandmarkCoordinates[(extracted_result.Length/2)];
+    //Debug.Log("landmarks length "+  landmarks.Length + " extracted result length " + extracted_result.Length);
 
-	//put the exteract method here dude 
-	
-	
+	for (int i = 0; i < extracted_result.Length; i++)
+	{
+		ntemp = i+1;
+		if (ntemp >= 0 && ntemp <= 68)
+		{
+		Int32.TryParse(extracted_result[i], out x);
+		//Debug.Log(x);
+		//x=float.Parse(extracted_result[i]);
+		//Debug.Log(x);
+	    Int32.TryParse(extracted_result[ntemp], out y);
+
+		//y=float.Parse(extracted_result[ntemp]);
+		//Debug.Log(y);
+		landmarks[i]= new LandmarkCoordinates(x,y);
+		}
+
+	}
+	//	Debug.Log(landmarks[0].x+ " , "  +landmarks[0].y );
+//	return landmarks;
+	 //landmark array returned to make its move on blendshapes :D 
 }
 	void OnGUI(){
 		Rect  rectObj=new Rect (40,10,200,400);
@@ -83,16 +99,17 @@ public string[] ExtractResults(string socket_string_input)
 		client = new UdpClient (port);
 		while (true) {
 			try{
+
 				IPEndPoint anyIP = new IPEndPoint(IPAddress.Parse("127.0.0.1"), port);
 				byte[] data = client.Receive(ref anyIP);
-
 				string text = Encoding.UTF8.GetString(data);
-				string[] results= ExtractResults(text);
-				 Debug.Log(results[0]);
-				//elimenate first "[]" and then make the sub method 
-				Debug.Log(text);
+				
+				//Debug.Log(text);
+				// ExtractResults(text);
+				//Debug.Log(landmarks[0].x+ " , "  +landmarks[1].y );
 				lastReceivedUDPPacket=text;
 				allReceivedUDPPackets=allReceivedUDPPackets+text;
+				ExtractResults(lastReceivedUDPPacket);
 				//xPos = float.Parse(text);
 			//	xPos *= 0.021818f;
 			}catch(Exception e){
